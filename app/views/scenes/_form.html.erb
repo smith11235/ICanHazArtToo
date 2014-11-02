@@ -11,19 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+ <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
-  </div>
-  <div class="field">
+  </p>
+ <p>
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_area :image %>
-  </div>
+    <%= f.text_field :description %>
+  </p>
+
+	<p>
+    <%= f.hidden_field :image %>
+	</p>
   <div class="actions">
-    <%= f.submit %>
-  </div>
+		<%= f.submit %> <b>Warning: set your image data if you want it saved</b>
+ </div>
 <% end %>
+<h2>Optional Image</h2>
+<script type="text/javascript" src="../svg-edit/embedapi.js"></script>
+<a href='#' id="set_svg"  >Set Image</a>
+<br/>
+<iframe src="../svg-edit/svg-editor.html" width="900px" height="600px" id="svgedit" onload="window.init_embed();"></iframe>    
