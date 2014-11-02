@@ -24,14 +24,7 @@ class ScenesController < ApplicationController
   # POST /scenes
   # POST /scenes.json
   def create
-		p = params[:scene] 
-		puts p
-    @scene = Scene.new( p )
-		@scene.title = p[:title]
-		@scene.description = p[:description]
-		@scene.image = p[:image]
-
-		puts @scene.to_yaml
+    @scene = Scene.new(scene_params)
 
     respond_to do |format|
       if @scene.save
@@ -76,10 +69,6 @@ class ScenesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def scene_params
-			puts params['scene'].keys.to_yaml
-			puts params['scene']['title']
-			puts params['scene']['description']
-			puts params['scene']['image'][0,100]
-      params.require('scene').permit( :title, :description, :image )
+      params.require(:scene).permit(:title, :description, :image)
     end
 end

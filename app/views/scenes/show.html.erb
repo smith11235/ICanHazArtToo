@@ -1,11 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @scene.title || "Unknown Title" %></h1>
+<p>
+  <strong>Title:</strong>
+  <%= @scene.title %>
+</p>
 
 <p>
-<i>
-<%= @scene.description || "No Description" %>
-</i>
+  <strong>Description:</strong>
+  <%= @scene.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @scene.image %>
 </p>
 
 <%= link_to 'Edit', edit_scene_path(@scene) %> |
