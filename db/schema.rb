@@ -11,11 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102023941) do
+ActiveRecord::Schema.define(version: 20141102044613) do
 
   create_table "scenes", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "description"
+    t.text     "image"
   end
 
 end
