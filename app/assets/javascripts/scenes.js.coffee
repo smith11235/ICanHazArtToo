@@ -3,13 +3,10 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
   console.log("DOM is ready")
-  // Overwriting defaults
-  svg2 = new Walkway( '#picture' )
-  //	{
-  //    //easing: 'linear',
-  //    duration: '1500',
-  //    selector: '#picture'
-  //  })
+  svg = new Walkway( '#picture' )
+  #    //easing: 'linear',
+  #    duration: '1500',
+  #    selector: '#picture'
 
-  svg2.draw ->
-    console.dir('done picture!')
+  svg.draw ->
+    console.log( 'done picture!' )
