@@ -1,0 +1,908 @@
+[2014-11-01 21:57:25] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /root/ICanHazArtToo/.rvm/src/ruby-2.1.3
+PATH=/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/eb/AWS-ElasticBeanstalk-CLI-2.6.0/eb/linux/python2.7/:/usr/local/rvm/bin
+GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p327:/usr/local/rvm/gems/ruby-1.9.3-p327@global
+command(2): __rvm_make -j8
++++ make -j8
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -ansi -std=iso9899:199409  -fPIC 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -msse2 -mfpmath=sse -mstackrealign -DRUBY_EXPORT
+	CPPFLAGS =   -I. -I.ext/include/i686-linux -I./include -I.
+	DLDFLAGS = -Wl,-soname,libruby.so.2.1  -fstack-protector  
+	SOLIBS = -lpthread -lrt -ldl -lcrypt -lm  
+Using built-in specs.
+Target: i486-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Debian 4.4.5-8' --with-bugurl=file:///usr/share/doc/gcc-4.4/README.Bugs --enable-languages=c,c++,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.4 --enable-shared --enable-multiarch --enable-linker-build-id --with-system-zlib --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.4 --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-objc-gc --enable-targets=all --with-arch-32=i586 --with-tune=generic --enable-checking=release --build=i486-linux-gnu --host=i486-linux-gnu --target=i486-linux-gnu
+Thread model: posix
+gcc version 4.4.5 (Debian 4.4.5-8) 
+compiling main.c
+compiling dmydln.c
+compiling miniinit.c
+compiling miniprelude.c
+copying dummy probes.h
+compiling bignum.c
+compiling class.c
+compiling compar.c
+compiling complex.c
+compiling dir.c
+compiling dln_find.c
+compiling encoding.c
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling load.c
+compiling proc.c
+compiling file.c
+compiling gc.c
+compiling hash.c
+load.c: In function ‘rb_load_internal0’:
+load.c:604: warning: ‘_th’ may be used uninitialized in this function
+compiling inits.c
+eval.c: In function ‘ruby_setup’:
+eval.c:57: warning: ‘_th’ may be used uninitialized in this function
+compiling io.c
+proc.c: In function ‘rb_method_call_with_block’:
+proc.c:1810: warning: ‘data’ may be used uninitialized in this function
+proc.c:1818: warning: ‘_th’ may be used uninitialized in this function
+eval.c: In function ‘setup_exception’:
+eval.c:511: warning: ‘_th’ may be used uninitialized in this function
+eval.c:469: warning: ‘file’ may be used uninitialized in this function
+compiling marshal.c
+eval.c: In function ‘ruby_options’:
+eval.c:99: warning: ‘_th’ may be used uninitialized in this function
+In file included from eval.c:33:
+eval_jump.c: In function ‘rb_exec_end_proc’:
+eval_jump.c:116: warning: ‘th’ may be used uninitialized in this function
+eval_jump.c:119: warning: ‘_th’ may be used uninitialized in this function
+eval.c: In function ‘ruby_cleanup’:
+eval.c:176: warning: ‘_th’ may be used uninitialized in this function
+eval.c:186: warning: ‘_th’ may be used uninitialized in this function
+eval.c:166: warning: ‘_th’ may be used uninitialized in this function
+compiling math.c
+compiling node.c
+compiling numeric.c
+compiling object.c
+compiling pack.c
+compiling parse.c
+compiling process.c
+compiling random.c
+compiling range.c
+compiling rational.c
+compiling re.c
+parse.y: In function ‘rb_check_id’:
+parse.y:10406: warning: dereferencing pointer ‘fake_str.558’ does break strict-aliasing rules
+parse.y:10406: note: initialized from here
+parse.y: In function ‘rb_intern3’:
+parse.y:10406: warning: dereferencing pointer ‘fake_str.558’ does break strict-aliasing rules
+parse.y:10406: note: initialized from here
+compiling regcomp.c
+parse.y: In function ‘rb_check_id_cstr’:
+parse.y:10406: warning: dereferencing pointer ‘fake_str.558’ does break strict-aliasing rules
+parse.y:10406: note: initialized from here
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+compiling regsyntax.c
+compiling ruby.c
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+compiling strftime.c
+compiling string.c
+compiling struct.c
+compiling time.c
+compiling transcode.c
+compiling util.c
+compiling variable.c
+compiling version.c
+compiling compile.c
+compiling debug.c
+compiling iseq.c
+iseq.c: In function ‘iseq_load’:
+iseq.c:540: warning: dereferencing type-punned pointer will break strict-aliasing rules
+compiling vm.c
+compiling vm_dump.c
+compiling vm_backtrace.c
+compiling vm_trace.c
+compiling thread.c
+compiling cont.c
+cont.c: In function ‘cont_capture’:
+cont.c:470: warning: ‘cont’ may be used uninitialized in this function
+In file included from vm.c:84:
+vm_eval.c: In function ‘rb_iterate’:
+vm_eval.c:1057: warning: ‘node’ may be used uninitialized in this function
+vm_eval.c:1058: warning: ‘th’ may be used uninitialized in this function
+vm_eval.c:1062: warning: ‘_th’ may be used uninitialized in this function
+vm_trace.c: In function ‘rb_suppress_tracing’:
+vm_trace.c:406: warning: ‘_th’ may be used uninitialized in this function
+cont.c: In function ‘rb_fiber_start’:
+cont.c:1273: warning: ‘fib’ may be used uninitialized in this function
+cont.c:1274: warning: ‘cont’ may be used uninitialized in this function
+cont.c:1281: warning: ‘_th’ may be used uninitialized in this function
+vm_backtrace.c: In function ‘rb_debug_inspector_open’:
+vm_backtrace.c:1190: warning: ‘_th’ may be used uninitialized in this function
+compiling ./enc/ascii.c
+compiling ./enc/us_ascii.c
+vm_trace.c: In function ‘exec_hooks_protected’:
+vm_trace.c:303: warning: ‘_th’ may be used uninitialized in this function
+compiling ./enc/unicode.c
+thread.c: In function ‘exec_recursive’:
+thread.c:4963: warning: ‘_th’ may be used uninitialized in this function
+compiling newline.c
+compiling ./enc/utf_8.c
+compiling ./missing/strlcpy.c
+compiling ./missing/strlcat.c
+compiling ./missing/setproctitle.c
+compiling addr2line.c
+thread.c: In function ‘thread_start_func_2’:
+thread.c:533: warning: ‘_th’ may be used uninitialized in this function
+compiling dmyext.c
+compiling dln.c
+compiling localeinit.c
+compiling array.c
+thread.c: In function ‘rb_thread_s_handle_interrupt’:
+thread.c:1807: warning: ‘_th’ may be used uninitialized in this function
+thread.c: In function ‘rb_thread_terminate_all’:
+thread.c:441: warning: ‘_th’ may be used uninitialized in this function
+vm_eval.c: In function ‘eval_string_with_cref’:
+vm_eval.c:1201: warning: ‘_th’ may be used uninitialized in this function
+vm_eval.c: In function ‘rb_eval_cmd’:
+vm_eval.c:1489: warning: ‘_th’ may be used uninitialized in this function
+vm_eval.c:1474: warning: ‘_th’ may be used uninitialized in this function
+linking miniruby
+generating encdb.h
+rbconfig.rb updated
+generating enc.mk
+creating verconf.h
+generating prelude.c
+compiling prelude.c
+compiling loadpath.c
+encdb.h unchanged
+making srcs under enc
+linking static-library libruby-static.a
+make[1]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+make[1]: Nothing to be done for `srcs'.
+make[1]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+generating transdb.h
+verifying static-library libruby-static.a
+linking shared-library libruby.so.2.1.0
+transdb.h unchanged
+making enc
+making trans
+generating makefile exts.mk
+make[1]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+make[1]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+compiling ./enc/emacs_mule.c
+compiling ./enc/trans/transdb.c
+compiling ./enc/encdb.c
+compiling ./enc/big5.c
+compiling ./enc/euc_jp.c
+compiling ./enc/cp949.c
+compiling ./enc/euc_kr.c
+configuring -test-/array/resize
+configuring -test-/bignum
+configuring -test-/bug-3571
+configuring -test-/bug-3662
+compiling ./enc/euc_tw.c
+configuring -test-/bug-5832
+compiling ./enc/gb2312.c
+configuring -test-/bug_reporter
+compiling ./enc/gb18030.c
+configuring -test-/class
+configuring -test-/debug
+compiling ./enc/gbk.c
+configuring -test-/exception
+configuring -test-/fatal
+compiling ./enc/trans/big5.c
+configuring -test-/file
+configuring -test-/funcall
+configuring -test-/iter
+compiling ./enc/iso_8859_1.c
+configuring -test-/load/dot.dot
+configuring -test-/marshal/compat
+configuring -test-/marshal/usr
+configuring -test-/method
+configuring -test-/num2int
+configuring -test-/old_thread_select
+compiling ./enc/iso_8859_2.c
+compiling ./enc/iso_8859_3.c
+compiling ./enc/iso_8859_4.c
+compiling ./enc/iso_8859_5.c
+compiling ./enc/trans/chinese.c
+compiling ./enc/trans/emoji.c
+compiling ./enc/iso_8859_6.c
+compiling ./enc/iso_8859_7.c
+compiling ./enc/iso_8859_8.c
+compiling ./enc/iso_8859_9.c
+compiling ./enc/iso_8859_10.c
+compiling ./enc/iso_8859_11.c
+configuring -test-/path_to_class
+configuring -test-/postponed_job
+configuring -test-/printf
+compiling ./enc/iso_8859_13.c
+configuring -test-/rational
+configuring -test-/recursion
+configuring -test-/st/numhash
+compiling ./enc/iso_8859_14.c
+configuring -test-/st/update
+compiling ./enc/iso_8859_15.c
+configuring -test-/string
+configuring -test-/struct
+configuring -test-/symbol
+compiling ./enc/iso_8859_16.c
+configuring -test-/tracepoint
+configuring -test-/typeddata
+configuring -test-/wait_for_single_fd
+compiling ./enc/koi8_r.c
+configuring -test-/win32/dln
+Failed to configure -test-/win32/dln. It will not be installed.
+configuring -test-/win32/dln/empty
+Failed to configure -test-/win32/dln/empty. It will not be installed.
+configuring -test-/win32/fd_setsize
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+configuring bigdecimal
+compiling ./enc/koi8_u.c
+compiling ./enc/trans/emoji_iso2022_kddi.c
+compiling ./enc/shift_jis.c
+compiling ./enc/utf_16be.c
+compiling ./enc/utf_16le.c
+compiling ./enc/utf_32be.c
+compiling ./enc/utf_32le.c
+compiling ./enc/windows_31j.c
+compiling ./enc/windows_1251.c
+linking encoding encdb.so
+configuring continuation
+configuring coverage
+configuring date
+configuring dbm
+linking encoding big5.so
+linking encoding cp949.so
+linking encoding emacs_mule.so
+linking encoding euc_jp.so
+linking encoding euc_kr.so
+linking encoding euc_tw.so
+linking encoding gb2312.so
+compiling ./enc/trans/emoji_sjis_docomo.c
+linking encoding gb18030.so
+linking encoding gbk.so
+linking encoding iso_8859_1.so
+linking encoding iso_8859_2.so
+linking encoding iso_8859_3.so
+linking encoding iso_8859_4.so
+linking encoding iso_8859_5.so
+linking encoding iso_8859_6.so
+linking encoding iso_8859_7.so
+compiling ./enc/trans/emoji_sjis_kddi.c
+compiling ./enc/trans/emoji_sjis_softbank.c
+linking encoding iso_8859_8.so
+linking encoding iso_8859_9.so
+linking encoding iso_8859_10.so
+linking encoding iso_8859_11.so
+compiling ./enc/trans/escape.c
+linking encoding iso_8859_13.so
+linking encoding iso_8859_14.so
+linking encoding iso_8859_15.so
+compiling ./enc/trans/gb18030.c
+linking encoding iso_8859_16.so
+linking encoding koi8_r.so
+linking encoding koi8_u.so
+linking encoding shift_jis.so
+compiling ./enc/trans/gbk.c
+linking encoding utf_16be.so
+compiling ./enc/trans/iso2022.c
+linking encoding utf_16le.so
+linking encoding utf_32be.so
+linking encoding utf_32le.so
+linking encoding windows_31j.so
+linking encoding windows_1251.so
+compiling ./enc/trans/japanese.c
+compiling ./enc/trans/japanese_euc.c
+compiling ./enc/trans/japanese_sjis.c
+make[1]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+compiling ./enc/trans/korean.c
+compiling ./enc/trans/single_byte.c
+compiling ./enc/trans/utf8_mac.c
+compiling ./enc/trans/utf_16_32.c
+linking transcoder transdb.so
+linking transcoder big5.so
+linking transcoder chinese.so
+linking transcoder emoji.so
+linking transcoder emoji_iso2022_kddi.so
+linking transcoder emoji_sjis_docomo.so
+linking transcoder emoji_sjis_kddi.so
+linking transcoder emoji_sjis_softbank.so
+linking transcoder escape.so
+linking transcoder gb18030.so
+linking transcoder gbk.so
+linking transcoder iso2022.so
+linking transcoder japanese.so
+linking transcoder japanese_sjis.so
+linking transcoder single_byte.so
+linking transcoder utf_16_32.so
+linking transcoder korean.so
+linking transcoder utf8_mac.so
+linking transcoder japanese_euc.so
+make[1]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+making encs
+make[1]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+make[1]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+header: gdbm-ndbm.h
+library: gdbm_compat
+configuring digest
+configuring digest/bubblebabble
+configuring digest/md5
+configuring digest/rmd160
+configuring digest/sha1
+configuring digest/sha2
+configuring dl
+configuring dl/callback
+configuring etc
+configuring fcntl
+configuring fiber
+configuring fiddle
+configuring gdbm
+configuring io/console
+configuring io/nonblock
+configuring io/wait
+configuring json
+configuring json/generator
+configuring json/parser
+configuring mathn/complex
+configuring mathn/rational
+configuring nkf
+configuring objspace
+configuring openssl
+configuring pathname
+configuring psych
+configuring pty
+configuring racc/cparse
+configuring rbconfig/sizeof
+configuring readline
+configuring ripper
+configuring sdbm
+configuring socket
+configuring stringio
+configuring strscan
+configuring syslog
+configuring thread
+configuring tk
+...........
+check struct members..
+check libraries....
+Use ActiveTcl libraries (if available).
+Search tclConfig.sh and tkConfig.sh.....................
+Fail to find [tclConfig.sh, tkConfig.sh]
+Use X11 libraries (or use TK_XINCLUDES/TK_XLIBSW information on tkConfig.sh).
+Warning:: cannot find X11 library. tcltklib will not be compiled (tcltklib is disabled on your Ruby. That is, Ruby/Tk will not work). Please check configure options. If your Tcl/Tk don't require X11, please try --without-X11.
+Can't find X11 libraries. 
+So, can't make tcltklib.so which is required by Ruby/Tk.
+Failed to configure tk. It will not be installed.
+configuring tk/tkutil
+Failed to configure tk/tkutil. It will not be installed.
+configuring win32
+Failed to configure win32. It will not be installed.
+configuring win32ole
+Failed to configure win32ole. It will not be installed.
+configuring zlib
+make[1]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/array/resize'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug-3571'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug-5832'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug-3662'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bignum'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug_reporter'
+compiling bug.c
+compiling resize.c
+compiling bug.c
+compiling bug.c
+compiling str2big.c
+compiling bug_reporter.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/class'
+compiling init.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/debug'
+compiling inspector.c
+compiling class2name.c
+installing default bug libraries
+installing default bug libraries
+linking shared-object -test-/bug-3662/bug.so
+linking shared-object -test-/bug-3571/bug.so
+installing default resize libraries
+installing default bug libraries
+linking shared-object -test-/bug-5832/bug.so
+compiling profile_frames.c
+linking shared-object -test-/array/resize.so
+installing default bug_reporter libraries
+linking shared-object -test-/bug_reporter/bug_reporter.so
+compiling mul.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug-3571'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/exception'
+compiling dataerror.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/array/resize'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug-5832'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/fatal'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/file'
+compiling rb_fatal.c
+compiling stat.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug-3662'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bug_reporter'
+installing default class libraries
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/iter'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/funcall'
+linking shared-object -test-/class.so
+compiling passing_block.c
+compiling yield.c
+compiling init.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/class'
+compiling big2str.c
+compiling ensured.c
+installing default debug libraries
+compiling bigzero.c
+compiling init.c
+compiling init.c
+installing default funcall libraries
+linking shared-object -test-/funcall/funcall.so
+installing default rb_fatal libraries
+linking shared-object -test-/fatal/rb_fatal.so
+linking shared-object -test-/debug.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/funcall'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/load/dot.dot'
+compiling dot.dot.c
+compiling init.c
+compiling intpack.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/fatal'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/debug'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/marshal/compat'
+compiling usrcompat.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/marshal/usr'
+compiling enc_raise.c
+compiling usrmarshal.c
+installing default file libraries
+linking shared-object -test-/file.so
+compiling break.c
+installing default dot.dot libraries
+linking shared-object -test-/load/dot.dot/dot.dot.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/load/dot.dot'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/method'
+compiling arity.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/file'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/num2int'
+compiling num2int.c
+installing default iter libraries
+installing default usr libraries
+installing default compat libraries
+compiling init.c
+linking shared-object -test-/marshal/compat.so
+linking shared-object -test-/iter.so
+installing default exception libraries
+linking shared-object -test-/exception.so
+linking shared-object -test-/marshal/usr.so
+installing default method libraries
+compiling div.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/iter'
+installing default num2int libraries
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/old_thread_select'
+linking shared-object -test-/method.so
+compiling old_thread_select.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/path_to_class'
+compiling path_to_class.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/exception'
+linking shared-object -test-/num2int/num2int.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/marshal/compat'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/printf'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/postponed_job'
+compiling postponed_job.c
+compiling printf.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/marshal/usr'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/rational'
+compiling rat.c
+printf.c: In function ‘printf_test_call’:
+printf.c:47: warning: ‘n’ may be used uninitialized in this function
+printf.c:48: warning: ‘s’ may be used uninitialized in this function
+compiling init.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/num2int'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/method'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/recursion'
+compiling recursion.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/st/numhash'
+installing default path_to_class libraries
+compiling numhash.c
+linking shared-object -test-/path_to_class/path_to_class.so
+installing default postponed_job libraries
+linking shared-object -test-/postponed_job.so
+installing default old_thread_select libraries
+linking shared-object -test-/old_thread_select/old_thread_select.so
+installing default printf libraries
+linking shared-object -test-/printf.so
+installing default rational libraries
+linking shared-object -test-/rational.so
+installing default bignum libraries
+linking shared-object -test-/bignum.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/path_to_class'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/st/update'
+compiling update.c
+installing default recursion libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/postponed_job'
+linking shared-object -test-/recursion.so
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/string'
+compiling cstr.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/old_thread_select'
+installing default numhash libraries
+linking shared-object -test-/st/numhash.so
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/struct'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/printf'
+compiling member.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/rational'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/symbol'
+compiling intern.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/tracepoint'
+compiling tracepoint.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/bignum'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/recursion'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/typeddata'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/st/numhash'
+compiling typeddata.c
+compiling ellipsize.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/wait_for_single_fd'
+compiling wait_for_single_fd.c
+installing default update libraries
+linking shared-object -test-/st/update.so
+compiling init.c
+installing default typeddata libraries
+compiling enc_associate.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/st/update'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/win32/dln'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/win32/dln'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/win32/dln/empty'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/win32/dln/empty'
+compiling type.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/win32/fd_setsize'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/win32/fd_setsize'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/bigdecimal'
+compiling bigdecimal.c
+compiling set_len.c
+compiling gc_hook.c
+linking shared-object -test-/typeddata/typeddata.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/typeddata'
+installing default struct libraries
+installing default wait_for_single_fd libraries
+linking shared-object -test-/struct.so
+linking shared-object -test-/wait_for_single_fd/wait_for_single_fd.so
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/continuation'
+compiling coderange.c
+compiling continuation.c
+compiling qsort.c
+installing default continuation libraries
+linking shared-object continuation.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/wait_for_single_fd'
+installing default tracepoint libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/struct'
+linking shared-object -test-/tracepoint.so
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/coverage'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/date'
+compiling coverage.c
+compiling date_strftime.c
+compiling init.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/continuation'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/dbm'
+compiling dbm.c
+compiling modify.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/tracepoint'
+compiling normalize.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest'
+compiling digest.c
+installing default coverage libraries
+linking shared-object coverage.so
+compiling init.c
+installing default symbol libraries
+compiling enc_str_buf_cat.c
+linking shared-object -test-/symbol.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/coverage'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/bubblebabble'
+compiling bubblebabble.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/symbol'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/md5'
+compiling md5init.c
+installing default string libraries
+compiling md5ossl.c
+linking shared-object -test-/string/string.so
+installing default bubblebabble libraries
+installing default md5 libraries
+linking shared-object digest/bubblebabble.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/-test-/string'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/sha1'
+compiling sha1init.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/rmd160'
+compiling rmd160init.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/bubblebabble'
+compiling sha1ossl.c
+linking shared-object digest/md5.so
+installing default sha1 libraries
+linking shared-object digest/sha1.so
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/sha2'
+compiling sha2init.c
+compiling rmd160.c
+linking shared-object digest.so
+installing digest libraries
+installing default digest libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest'
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/md5'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/dl/callback'
+compiling callback.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/sha1'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/dl'
+compiling handle.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/etc'
+compiling etc.c
+compiling sha2ossl.c
+installing default dbm libraries
+linking shared-object dbm.so
+compiling date_strptime.c
+compiling callback-0.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/dbm'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/fcntl'
+compiling fcntl.c
+installing default sha2 libraries
+linking shared-object digest/sha2.so
+compiling dl.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/sha2'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/fiber'
+compiling fiber.c
+installing default fcntl libraries
+linking shared-object fcntl.so
+installing default fiber libraries
+linking shared-object fiber.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/fcntl'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/fiddle'
+compiling conversions.c
+installing default etc libraries
+linking shared-object etc.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/fiber'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/gdbm'
+compiling gdbm.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/etc'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/io/console'
+compiling console.c
+installing default rmd160 libraries
+linking shared-object digest/rmd160.so
+compiling cptr.c
+compiling handle.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/digest/rmd160'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/io/nonblock'
+compiling nonblock.c
+compiling closure.c
+installing default nonblock libraries
+linking shared-object io/nonblock.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/io/nonblock'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/io/wait'
+compiling wait.c
+linking shared-object io/console.so
+installing default console libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/io/console'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/json'
+compiling cfunc.c
+installing default libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/json'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/json/generator'
+compiling generator.c
+installing default wait libraries
+linking shared-object io/wait.so
+compiling fiddle.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/io/wait'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/json/parser'
+compiling parser.c
+compiling date_parse.c
+compiling function.c
+installing default gdbm libraries
+linking shared-object gdbm.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/gdbm'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/mathn/complex'
+compiling complex.c
+installing default complex libraries
+linking shared-object mathn/complex.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/mathn/complex'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/mathn/rational'
+compiling rational.c
+installing default rational libraries
+linking shared-object mathn/rational.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/mathn/rational'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/nkf'
+compiling nkf.c
+compiling pointer.c
+installing default parser libraries
+linking shared-object json/ext/parser.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/json/parser'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/objspace'
+compiling object_tracing.c
+linking shared-object fiddle.so
+installing default fiddle libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/fiddle'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/openssl'
+compiling ossl_ssl_session.c
+compiling objspace.c
+installing default generator libraries
+linking shared-object json/ext/generator.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/json/generator'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/pathname'
+compiling pathname.c
+compiling ossl_ocsp.c
+linking shared-object bigdecimal.so
+compiling objspace_dump.c
+installing default bigdecimal libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/bigdecimal'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/psych'
+compiling psych_to_ruby.c
+compiling psych.c
+compiling psych_parser.c
+installing default objspace libraries
+linking shared-object objspace.so
+compiling ossl_x509req.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/objspace'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/pty'
+compiling pty.c
+installing dl libraries
+compiling psych_emitter.c
+installing default pty libraries
+installing default pathname libraries
+linking shared-object pathname.so
+linking shared-object pty.so
+linking shared-object dl.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/pty'
+compiling psych_yaml_tree.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/pathname'
+installing default dl libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/dl'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/racc/cparse'
+compiling cparse.c
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/rbconfig/sizeof'
+compiling sizes.c
+compiling ossl_ns_spki.c
+compiling callback-1.c
+installing default sizeof libraries
+linking shared-object rbconfig/sizeof.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/rbconfig/sizeof'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/readline'
+compiling readline.c
+compiling date_core.c
+linking shared-object psych.so
+compiling ossl_x509revoked.c
+installing default psych libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/psych'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/ripper'
+compiling ripper.c
+installing default cparse libraries
+linking shared-object racc/cparse.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/racc/cparse'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/sdbm'
+compiling _sdbm.c
+compiling ossl_pkcs12.c
+installing default readline libraries
+linking shared-object readline.so
+compiling init.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/readline'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/socket'
+generating constant definitions
+compiling ossl_pkcs5.c
+generating constant definitions
+compiling basicsocket.c
+compiling ossl_pkcs7.c
+installing default sdbm libraries
+linking shared-object sdbm.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/sdbm'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/stringio'
+compiling stringio.c
+compiling socket.c
+compiling callback-2.c
+installing default nkf libraries
+linking shared-object nkf.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/nkf'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/strscan'
+compiling strscan.c
+compiling ossl_pkey_ec.c
+compiling ipsocket.c
+compiling tcpsocket.c
+installing default stringio libraries
+linking shared-object stringio.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/stringio'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/syslog'
+compiling syslog.c
+installing default strscan libraries
+linking shared-object strscan.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/strscan'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/thread'
+compiling thread.c
+compiling tcpserver.c
+linking shared-object syslog.so
+installing default syslog libraries
+compiling sockssocket.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/syslog'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/tk'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/tk'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/tk/tkutil'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/tk/tkutil'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/win32'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/win32'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/win32ole'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/win32ole'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/zlib'
+compiling zlib.c
+compiling udpsocket.c
+installing default thread libraries
+linking shared-object thread.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/thread'
+compiling unixsocket.c
+compiling unixserver.c
+compiling ossl_bn.c
+compiling option.c
+compiling ancdata.c
+compiling raddrinfo.c
+compiling ossl_config.c
+compiling ifaddr.c
+compiling ossl.c
+installing default socket libraries
+compiling init.c
+compiling constants.c
+linking shared-object date_core.so
+compiling ossl_bio.c
+installing default date_core libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/date'
+compiling ossl_pkey.c
+installing default zlib libraries
+linking shared-object zlib.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/zlib'
+compiling ossl_ssl.c
+compiling ossl_digest.c
+compiling ossl_x509attr.c
+compiling callback-3.c
+compiling ossl_x509ext.c
+compiling ossl_x509store.c
+compiling ossl_x509.c
+compiling ossl_cipher.c
+compiling ossl_hmac.c
+compiling ossl_pkey_dh.c
+compiling ossl_asn1.c
+linking shared-object socket.so
+compiling ossl_x509name.c
+compiling openssl_missing.c
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/socket'
+compiling ossl_engine.c
+linking shared-object ripper.so
+compiling ossl_rand.c
+installing default ripper libraries
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/ripper'
+compiling ossl_pkey_dsa.c
+compiling ossl_pkey_rsa.c
+compiling ossl_x509crl.c
+compiling ossl_x509cert.c
+compiling callback-4.c
+compiling callback-5.c
+installing default openssl libraries
+compiling callback-6.c
+compiling callback-7.c
+compiling callback-8.c
+installing default callback libraries
+linking shared-object openssl.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/openssl'
+linking shared-object dl/callback.so
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3/ext/dl/callback'
+make[2]: Entering directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+linking shared-library libruby.so.2.1.0
+linking ruby
+make[2]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'
+make[1]: Leaving directory `/root/ICanHazArtToo/.rvm/src/ruby-2.1.3'

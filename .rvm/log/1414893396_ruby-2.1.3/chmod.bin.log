@@ -1,0 +1,28 @@
+[2014-11-01 22:00:21] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /root/ICanHazArtToo/.rvm/src/ruby-2.1.3
+PATH=/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/eb/AWS-ElasticBeanstalk-CLI-2.6.0/eb/linux/python2.7/:/usr/local/rvm/bin
+GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p327:/usr/local/rvm/gems/ruby-1.9.3-p327@global
+command(9): __rvm_set_executable /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/erb /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/gem /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/irb /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/rake /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/rdoc /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/ri /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/ruby /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/testrb
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/erb ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/gem ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/irb ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/rake ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/rdoc ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/ri ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/ruby ]]
++++ for __file in '"$@"'
++++ [[ -x /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/testrb ]]

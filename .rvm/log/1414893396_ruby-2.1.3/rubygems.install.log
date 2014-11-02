@@ -1,0 +1,134 @@
+[2014-11-01 22:00:30] /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/ruby
+current path: /root/ICanHazArtToo/.rvm/src/rubygems-2.4.2
+PATH=/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/eb/AWS-ElasticBeanstalk-CLI-2.6.0/eb/linux/python2.7/:/usr/local/rvm/bin
+GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p327:/usr/local/rvm/gems/ruby-1.9.3-p327@global
+command(6): env GEM_HOME=/root/ICanHazArtToo/.rvm/gems/ruby-2.1.3@global GEM_PATH= /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/ruby -d /root/ICanHazArtToo/.rvm/src/rubygems-2.4.2/setup.rb
+Exception `LoadError' at /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/rubygems.rb:1194 - cannot load such file -- rubygems/defaults/operating_system
+Exception `LoadError' at /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/rubygems.rb:1203 - cannot load such file -- rubygems/defaults/ruby
+RubyGems 2.4.2 installed
+Parsing documentation for rubygems-2.4.2
+Installing ri documentation for rubygems-2.4.2
+
+=== 2.4.2 / 2014-10-01
+
+This release was sponsored by Ruby Central.
+
+Bug fixes:
+
+* RubyGems now correctly matches wildcard no_proxy hosts.  Issue #997 by
+  voelzemo.
+* Added support for missing git_source method in the gem dependencies API.
+* Fixed handling of git gems with an alternate install directory.
+* Lockfiles will no longer be truncated upon resolution errors.
+* Fixed messaging for `gem owner -a`.  Issue #1004 by Aaron Patterson, Ryan
+  Davis.
+* Removed meaningless ensure.  Pull request #1003 by gogotanaka.
+* Improved wording of --source option help.  Pull request #989 by Jason Clark.
+* Empty build_info files are now ignored.  Issue #903 by Adan Alvarado.
+* Gem::Installer ignores dependency checks when installing development
+  dependencies.  Issue #994 by Jens Willie.
+* `gem update` now continues after dependency errors.  Issue #993 by aaronchi.
+* RubyGems no longer warns about semantic version dependencies for the 0.x
+  range.  Issue #987 by Jeff Felchner, pull request #1006 by Hsing-Hui Hsu.
+* Added minimal lock to allow multithread installation of gems.  Issue #982
+  and pull request #1005 by Yorick Peterse
+* RubyGems now considers prerelease dependencies as it did in earlier versions
+  when --prerelease is given.  Issue #990 by Jeremy Tryba.
+* Updated capitalization in README.  Issue #1010 by Ben Bodenmiller.
+* Fixed activating gems from a Gemfile for default gems.  Issue #991 by khoan.
+* Fixed windows stub script generation for Cygwin.  Issue #1000 by Brett
+  DiFrischia.
+* Allow gem bindir and ruby.exe to live in separate diretories.  Pull request
+  #942 by Ian Flynn.
+* Fixed handling of gemspec in gem dependencies files to match Bundler
+  behavior.  Issue #1020 by Michal Papis.
+* Fixed `gem update` when updating to prereleases.  Issue #1028 by Santiago
+  Pastorino.
+* RubyGems now fails immediately when a git reference cannot be found instead
+  of spewing git errors.  Issue #1031 by Michal Papis
+
+=== 2.4.1 / 2014-07-17
+
+Bug fixes:
+
+* RubyGems can now be updated on Ruby implementations that do not support
+  vendordir in RbConfig::CONFIG.  Issue #974 by net1957.
+
+=== 2.4.0 / 2014-07-16
+
+Minor enhancements:
+
+* The contents command now supports a --show-install-dir option that shows
+  only the directory the gem is installed in.  Feature request #966 by Akinori
+  MUSHA.
+* Added a --build-root option to the install command for packagers.  Pull
+  request #965 by Marcus Rückert.
+* Added vendor gem support to RubyGems.  Package managers may now install gems
+  in Gem.vendor_dir with the --vendor option to gem install.  Issue #943 by
+  Marcus Rückert.
+
+Bug fixes:
+
+* Kernel#gem now respects the prerelease flag when activating gems.
+  Previously this behavior was undefined which could lead to bugs when a
+  prerelease version was unintentionally activated.  Bug #938 by Joe Ferris.
+* RubyGems now prefers gems from git over installed gems.  This allows gems
+  from git to override an installed gem with the same name and version.  Bug
+  #944 by Thomas Kriechbaumer.
+* Fixed handling of git gems in a lockfile with unversioned dependencies.  Bug
+  #940 by Michael Kaiser-Nyman.
+* The ruby directive in a gem dependencies file is ignored when installing.
+  Bug #941 by Michael Kaiser-Nyman.
+* Added open to list of builtin commands (`gem open` now works).  Reported by
+  Espen Antonsen.
+* `gem open` now works with command-line editors.  Pull request #962 by Tim
+  Pope.
+* `gem install -g` now respects `--conservative`.  Pull request #950 by Jeremy
+  Evans.
+* RubyGems releases announcements now now include checksums.  Bug #939 by
+  Alexander E. Fischer.
+* RubyGems now expands ~ in $PATH when checking if installed executables will
+  be runnable.  Pull request #945 by Alex Talker.
+* Fixed `gem install -g --explain`.  Issue #947 by Luis Lavena.  Patch by
+  Hsing-Hui Hsu.
+* RubyGems locks less during gem activation.  Pull request #951 by Aaron
+  Patterson and Justin Searls, #969 by Jeremy Tryba.
+* Kernel#gem is now thread-safe.  Pull request #967 by Aaron Patterson.
+* RubyGems now handles spaces in directory names for some parts of extension
+  building.  Pull request #949 by Tristan Hill.
+* RubyGems no longer defines an empty Date class.  Pull Request #948 by Benoit
+  Daloze.
+* RubyGems respects --document options for `gem update` again.  Bug 946 by
+  jonforums.  Patch by Hsing-Hui Hsu.
+* RubyGems generates documentation again with --ignore-dependencies.  Bug #961
+  by Pulfer.
+* RubyGems can install extensions across partitions now.  Pull request #970 by
+  Michael Scherer.
+* `-s` is now short for `--source` which resolves an ambiguity with
+  --no-suggestions.  Pull request #955 by Alexander Kahn.
+* Added extra test for ~> for 0.0.X versions.  Pull request #958 by Mark
+  Lorenz.
+* Fixed typo in gem updated help.  Pull request #952 by Per Modin.
+* Clarified that the gem description should not be excessively long.  Part of
+  bug #956 by Renier Morales.
+* Hid documentation of outdated test_files related methods in Specification.
+  Guides issue #90 by Emil Soman.
+* RubyGems now falls back to the old index if the rubygems.org API fails
+  during gem resolution.
+
+
+
+------------------------------------------------------------------------------
+
+RubyGems installed the following executables:
+	/root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin/gem
+
+Ruby Interactive (ri) documentation was installed. ri is kind of like man 
+pages for ruby libraries. You may access it like this:
+  ri Classname
+  ri Classname.class_method
+  ri Classname#instance_method
+If you do not wish to install this documentation in the future, use the
+--no-document flag, or set it as the default in your ~/.gemrc file. See
+'gem help env' for details.
+

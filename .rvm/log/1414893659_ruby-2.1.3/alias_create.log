@@ -1,0 +1,46 @@
+[2014-11-01 22:00:59] alias_create_exceute
+alias_create_exceute () 
+{ 
+    for _path in "$rvm_rubies_path" "$rvm_environments_path" "$rvm_wrappers_path";
+    do
+        if [[ -L "$_path/$alias_name" ]]; then
+            \command \rm -fv "$_path/$alias_name" || return $?;
+        fi;
+        \command \ln -fs "$_path/$rvm_ruby_string" "$_path/$alias_name" || return $?;
+    done;
+    __rvm_db_ "$rvm_path/config/alias" "$alias_name" "$rvm_ruby_string"
+}
+current path: /root/ICanHazArtToo
+GEM_HOME=/root/ICanHazArtToo/.rvm/gems/ruby-2.1.3
+PATH=/root/ICanHazArtToo/.rvm/gems/ruby-2.1.3/bin:/root/ICanHazArtToo/.rvm/gems/ruby-2.1.3@global/bin:/root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3/bin:/usr/local/rvm/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/eb/AWS-ElasticBeanstalk-CLI-2.6.0/eb/linux/python2.7
+GEM_PATH=/root/ICanHazArtToo/.rvm/gems/ruby-2.1.3:/root/ICanHazArtToo/.rvm/gems/ruby-2.1.3@global
+command(1): alias_create_exceute
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /root/ICanHazArtToo/.rvm/rubies/default ]]
++ command ln -fs /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3 /root/ICanHazArtToo/.rvm/rubies/default
++ ln -fs /root/ICanHazArtToo/.rvm/rubies/ruby-2.1.3 /root/ICanHazArtToo/.rvm/rubies/default
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /root/ICanHazArtToo/.rvm/environments/default ]]
++ command ln -fs /root/ICanHazArtToo/.rvm/environments/ruby-2.1.3 /root/ICanHazArtToo/.rvm/environments/default
++ ln -fs /root/ICanHazArtToo/.rvm/environments/ruby-2.1.3 /root/ICanHazArtToo/.rvm/environments/default
++ for _path in '"$rvm_rubies_path"' '"$rvm_environments_path"' '"$rvm_wrappers_path"'
++ [[ -L /root/ICanHazArtToo/.rvm/wrappers/default ]]
++ command ln -fs /root/ICanHazArtToo/.rvm/wrappers/ruby-2.1.3 /root/ICanHazArtToo/.rvm/wrappers/default
++ ln -fs /root/ICanHazArtToo/.rvm/wrappers/ruby-2.1.3 /root/ICanHazArtToo/.rvm/wrappers/default
++ __rvm_db_ /root/ICanHazArtToo/.rvm/config/alias default ruby-2.1.3
++ typeset __db __key __value
++ __db=/root/ICanHazArtToo/.rvm/config/alias
++ __key=default
++ shift 2
++ __value=ruby-2.1.3
++ case "${__value}" in
++ __rvm_db_add /root/ICanHazArtToo/.rvm/config/alias default ruby-2.1.3
++ typeset __dir=/root/ICanHazArtToo/.rvm/config
++ [[ -f /root/ICanHazArtToo/.rvm/config/alias ]]
++ __rvm_db_remove /root/ICanHazArtToo/.rvm/config/alias default
++ [[ -f /root/ICanHazArtToo/.rvm/config/alias ]]
++ __rvm_sed -e '\#^default=# d' -e '/^$/d' /root/ICanHazArtToo/.rvm/config/alias
++ sed -e '\#^default=# d' -e '/^$/d' /root/ICanHazArtToo/.rvm/config/alias
++ command mv -f /root/ICanHazArtToo/.rvm/config/alias.new /root/ICanHazArtToo/.rvm/config/alias
++ mv -f /root/ICanHazArtToo/.rvm/config/alias.new /root/ICanHazArtToo/.rvm/config/alias
++ printf '%b=%b\n' default ruby-2.1.3

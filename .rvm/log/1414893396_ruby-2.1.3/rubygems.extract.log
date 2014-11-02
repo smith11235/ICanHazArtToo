@@ -1,0 +1,66 @@
+[2014-11-01 22:00:23] __rvm_package_extract
+__rvm_package_extract () 
+{ 
+    rvm_debug __rvm_package_extract:$#: "$@";
+    typeset __tempdir __path __file __return;
+    __return=0;
+    __tempdir="$( TMPDIR="${rvm_tmp_path}" mktemp -d -t rvm-tmp.XXXXXXXXX )";
+    __rvm_package_extract_run "$1" "$__tempdir" || __return=$?;
+    if (( __return == 0 )); then
+        for __path in "$__tempdir"/*;
+        do
+            __file="${__path##*/}";
+            if [[ -n "${__file}" && -e "$2/${__file}" ]]; then
+                \command \rm -rf "$2/${__file}" || __return=$?;
+            fi;
+            \command \mv -f "${__path}" "$2/" || __return=$?;
+        done;
+    fi;
+    if [[ -n "$__tempdir" ]]; then
+        \command \rm -rf "$__tempdir";
+    fi;
+    return $__return
+}
+current path: /root/ICanHazArtToo/.rvm/src/ruby-2.1.3
+PATH=/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/eb/AWS-ElasticBeanstalk-CLI-2.6.0/eb/linux/python2.7/:/usr/local/rvm/bin
+GEM_PATH=/usr/local/rvm/gems/ruby-1.9.3-p327:/usr/local/rvm/gems/ruby-1.9.3-p327@global
+command(3): __rvm_package_extract /root/ICanHazArtToo/.rvm/archives/rubygems-2.4.2.tgz /root/ICanHazArtToo/.rvm/src
++++ rvm_debug __rvm_package_extract:2: /root/ICanHazArtToo/.rvm/archives/rubygems-2.4.2.tgz /root/ICanHazArtToo/.rvm/src
++++ ((  0  ))
++++ return 0
++++ typeset __tempdir __path __file __return
++++ __return=0
+++++ TMPDIR=/root/ICanHazArtToo/.rvm/tmp
+++++ mktemp -d -t rvm-tmp.XXXXXXXXX
++++ __tempdir=/root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA
++++ __rvm_package_extract_run /root/ICanHazArtToo/.rvm/archives/rubygems-2.4.2.tgz /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA
++++ [[ !    =~  --no-same-owner  ]]
++++ __rvm_tar --help
++++ __rvm_grep -- --no-same-owner
++++ GREP_OPTIONS=
++++ command grep -- --no-same-owner
++++ grep -- --no-same-owner
++++ rvm_tar_options=--no-same-owner
++++ [[ -d /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA ]]
++++ case "$1" in
++++ [[ -n '' ]]
++++ __rvm_tar xzf /root/ICanHazArtToo/.rvm/archives/rubygems-2.4.2.tgz -C /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA --no-same-owner
++++ tar xzf /root/ICanHazArtToo/.rvm/archives/rubygems-2.4.2.tgz -C /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA --no-same-owner
++++ __rvm_fix_group_permissions /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA/rubygems-2.4.2
++++ umask -S
++++ __rvm_grep g=rw
++++ GREP_OPTIONS=
++++ command grep g=rw
++++ grep g=rw
++++ return 1
++++ ((  __return == 0  ))
++++ for __path in '"$__tempdir"/*'
++++ __file=rubygems-2.4.2
++++ [[ -n rubygems-2.4.2 ]]
++++ [[ -e /root/ICanHazArtToo/.rvm/src/rubygems-2.4.2 ]]
++++ command mv -f /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA/rubygems-2.4.2 /root/ICanHazArtToo/.rvm/src/
++++ mv -f /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA/rubygems-2.4.2 /root/ICanHazArtToo/.rvm/src/
++++ [[ -n /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA ]]
++++ command rm -rf /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA
++++ rm -rf /root/ICanHazArtToo/.rvm/tmp/rvm-tmp.SUmqXD9aA
++++ return 0
