@@ -13,7 +13,30 @@ repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2
 	text-align: center ;
 	background: #F3E2A9;
 	width: 80%;
-//	height: 80%;
+	height: 80%;
+	margin: 0 auto;
+}
+
+.picture_info {
+	text-align: center ;
+	background: #A4A4A4;
+	width: 50%;
+	hight: 20%;
+	margin: 0 auto;
+}
+
+.picture_editor {
+	text-align: center ;
+	background: #A4A4A4;
+	width: 95%;
+	hight: 90%;
+	margin: 0 auto;
+}
+
+.scene_listing {
+	text-align: center ;
+	background: #FAAC58;
+	width: 50%;
 	margin: 0 auto;
 }
 }

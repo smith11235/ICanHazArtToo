@@ -40,6 +40,12 @@ class ScenesController < ApplicationController
   # PATCH/PUT /scenes/1
   # PATCH/PUT /scenes/1.json
   def update
+		# TODO: revision pictures in ways that are meaningful
+		# for now just duplicate
+		old_scene = @scene
+    @scene = Scene.new(scene_params)
+		@scene.title << " (Revised: #{old_scene.title})"
+
     respond_to do |format|
       if @scene.update(scene_params)
         format.html { redirect_to @scene, notice: 'Scene was successfully updated.' }

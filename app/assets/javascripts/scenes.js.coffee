@@ -13,6 +13,9 @@ init_embed = ->
   doc = frame.contentWindow.document  unless doc
   mainButton = doc.getElementById("main_button")
   mainButton.style.display = "none"
+  if $('#scene_image').attr( 'value' )?
+    loadSvg()
+
   return
 
 window.init_embed = init_embed
@@ -32,8 +35,9 @@ setSvg = ->
 
 
 loadSvg = ->
-  svgexample = "<svg width=\"640\" height=\"480\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns=\"http://www.w3.org/2000/svg\"><g><title>Layer 1</title><rect stroke-width=\"5\" stroke=\"#000000\" fill=\"#FF0000\" id=\"svg_1\" height=\"35\" width=\"51\" y=\"35\" x=\"32\"/><ellipse ry=\"15\" rx=\"24\" stroke-width=\"5\" stroke=\"#000000\" fill=\"#0000ff\" id=\"svg_2\" cy=\"60\" cx=\"66\"/></g></svg>"
-  svgCanvas.setSvgString svgexample
+  svg_doc = $('#scene_image').attr( 'value' )
+  svgCanvas.setSvgString svg_doc
+  console.log( "Loading existing svg data" )
   return
 
 $ ->

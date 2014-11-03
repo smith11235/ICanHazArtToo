@@ -1,4 +1,5 @@
 <%= form_for(@scene) do |f| %>
+<div class="picture_info" >
   <% if @scene.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@scene.errors.count, "error") %> prohibited this scene from being saved:</h2>
@@ -17,18 +18,31 @@
   </p>
  <p>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </p>
 
 	<p>
-    <%= f.hidden_field :image %>
+    <%= f.hidden_field :image, :value => @scene.image %>
 	</p>
   <div class="actions">
 		<%= f.submit %> <b>Warning: set your image data if you want it saved</b>
+	<h2>Optional Image</h2>
+<a href='#' id="set_svg"  >Set Image For Saving!!!!</a>
  </div>
 <% end %>
-<h2>Optional Image</h2>
-<script type="text/javascript" src="../svg-edit/embedapi.js"></script>
-<a href='#' id="set_svg"  >Set Image</a>
+</div>
+<div class="picture_editor" >
+<script type="text/javascript" src="/svg-edit/embedapi.js"></script>
 <br/>
-<iframe src="../svg-edit/svg-editor.html" width="900px" height="600px" id="svgedit" onload="window.init_embed();"></iframe>    
+<iframe src="/svg-edit/svg-editor.html" width="900px" height="600px" id="svgedit" onload="window.init_embed();"></iframe>    
+
+</div>
+<br />
+<div class="picture_info" >
+	<h2>Prior Scene</h2>
+</div>
+<div class="picture_frame" >
+	<%= @scene.html_safe_image.html_safe %>
+</div>
+
+
