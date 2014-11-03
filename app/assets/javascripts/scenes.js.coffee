@@ -58,4 +58,7 @@ $ ->
   $("#set_svg").click ->
     setSvg()
 
+  $(".edit_scene").submit ->
+    setSvg()
+
 
