@@ -1,17 +1,17 @@
+
+<div id="picture_div" class="picture_frame" >
 <p id="notice"><%= notice %></p>
+	<h1>
+		<%= @scene.title || "Unknown Title" %>
+	</h1>
 
-<h1>
-  <%= @scene.title || "Unknown Title" %>
-</h1>
+	<p>
+	<strong><%= @scene.description || "No Description" %></strong>
+	<br />
+	<%= link_to 'Edit', edit_scene_path(@scene) %> |
+	<%= link_to 'Back', scenes_path %>
+	</p>
 
-<p>
-  <strong><%= @scene.description || "No Description" %></strong>
-</p>
-
-<%= link_to 'Edit', edit_scene_path(@scene) %> |
-<%= link_to 'Back', scenes_path %>
-
-<br />
-
-<%= @scene.html_safe_image.html_safe %>
+	<%= @scene.html_safe_image.html_safe %>
+</div>
 

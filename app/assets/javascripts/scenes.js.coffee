@@ -38,12 +38,20 @@ loadSvg = ->
 
 $ ->
   console.log("DOM is ready")
-  svg = new Walkway( '#picture' )
-  #    //easing: 'linear',
-  #    duration: '1500',
-  #    selector: '#picture'
+
+  svg = new Walkway(
+    selector: "#picture"
+    duration: "2000"
+    
+    # can pass in a function or a string like 'easeOutQuint'
+    easing: (t) ->
+      t * t
+  )
+
   svg.draw ->
     console.log( 'done picture!' )
 
   $("#set_svg").click ->
     setSvg()
+
+
